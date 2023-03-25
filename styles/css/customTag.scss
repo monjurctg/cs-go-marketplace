@@ -1,0 +1,444 @@
+.cmn-Btn {
+  box-sizing: border-box;
+
+  font-family: "Lato" !important;
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px 24px 12px 24px;
+  background: #0e0726;
+  gap: 5px;
+  border: 2px solid #ffc700;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #ffc700;
+  font-weight: 700;
+  cursor: pointer;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* black */
+
+  background: #0e0726;
+  /* orange */
+
+  /* border: 1px solid #271369; */
+  border-radius: 8px;
+}
+
+/* checkbox  */
+.checkbox-container {
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 8px;
+  gap: 10px;
+
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #271369;
+
+  /* orange */
+
+  background: #0e0726;
+
+  border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #0e0726;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #ffc700;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 6px;
+  width: 10px;
+  height: 14px;
+  border: 1px solid #271369;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.loader {
+  position: absolute;
+  width: 100px;
+  height: 16px;
+  left: 50%;
+  top: 50%;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 32px 0 #fff;
+  left: 50%;
+  top: 50%;
+  animation: ballMoveX 1s linear infinite;
+}
+.loader:after {
+  box-shadow: none;
+  transform-origin: 40px 0;
+  transform: rotate(-153deg);
+  animation: rotateLoader 1s linear infinite;
+}
+
+@keyframes rotateLoader {
+  0%,
+  10% {
+    transform: rotate(-153deg);
+  }
+  90%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes ballMoveX {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(32px);
+  }
+}
+
+// default modal layout
+.modalContainer {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.547);
+  .modalContent {
+    box-sizing: border-box;
+    width: 788px;
+    min-height: 300px;
+    transition: all 0.5s ease-in-out;
+
+    margin: 0 auto;
+    padding: 10px 30px;
+
+    /* black */
+
+    background: #0e0726;
+    /* black card shadow */
+
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    @media all and (max-width: 950px) {
+      width: 600px;
+      // font-size: 15px !important;
+      p {
+        font-size: 18px;
+      }
+    }
+
+    @media all and (max-width: 700px) {
+      width: 100%;
+      margin-top: -94px;
+      padding: 20px;
+      .p {
+        font-size: 15px;
+      }
+      .checkmark {
+        width: 18px;
+        height: 18px;
+      }
+      .checkbox-container .checkmark:after {
+        left: 4px;
+        top: 2px;
+        width: 8px;
+        height: 13px;
+      }
+      .process-container .complete-input input {
+        width: 100%;
+      }
+    }
+
+    .header {
+      display: flex;
+
+      justify-content: space-between;
+      .close {
+        cursor: pointer;
+      }
+    }
+    .modalBody {
+    }
+  }
+}
+
+// process Login   Disclaimer
+
+/* modal process */
+.process-container {
+  padding-bottom: 50px;
+  .process-body {
+    margin-top: 30px;
+    .condition {
+      display: flex;
+      margin-bottom: 30px;
+      gap: 10px;
+      p {
+        margin-top: 3px;
+      }
+    }
+  }
+  .process-btn {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+  .complete-input {
+    margin-top: 10px;
+    input {
+      box-sizing: border-box;
+
+      /* Auto layout */
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 14px 12px 14px 16px;
+      gap: 12px;
+
+      /* black */
+
+      background: #0e0726;
+      /* blue 600 */
+      width: 414px;
+      height: 52px;
+
+      border: 1px solid #2c1f59;
+      border-radius: 8px;
+
+      // font
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      /* or 19px */
+
+      /* blue grey */
+    }
+  }
+}
+
+.drop_items {
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+  border: 1px solid #2c1f59;
+  border-radius: 10px;
+  background: #0e0726;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  overflow: none;
+
+  // gap: 15px;
+  // padding: 10px 20px;
+
+  .drop-item {
+    list-style: none;
+    border-bottom: solid 2px #2c1f59;
+    padding: 15px 10px;
+  }
+  .active-drop {
+    border-bottom: solid 2px #2c1f59;
+  }
+}
+.drop-item-show {
+  opacity: 1 !important;
+}
+.drop-item-hide {
+  opacity: 0 !important;
+}
+
+// .container {
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.slider {
+  position: relative;
+  width: 80%;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+  position: absolute;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 3px;
+  height: 5px;
+}
+
+.slider__track {
+  width: 100%;
+  z-index: 1;
+  background: #271369;
+  border-radius: 5px;
+}
+
+.slider__range {
+  background-color: #ffc700;
+  z-index: 2;
+}
+
+.slider__left-value,
+.slider__right-value {
+  color: #dee2e6;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.slider__left-value {
+  left: 6px;
+}
+
+.slider__right-value {
+  right: -4px;
+}
+
+.arow {
+  display: flex;
+  gap: 50px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 80%;
+  outline: none;
+}
+
+.thumb--left {
+  z-index: 3;
+}
+
+.thumb--right {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+.trans_box {
+  width: 246px;
+  height: 128px;
+
+  /* black */
+
+  background: #0e0726;
+  /* black card shadow */
+
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}

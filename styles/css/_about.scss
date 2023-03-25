@@ -1,0 +1,99 @@
+.ab__para {
+  height: 100% !important;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #ffffff;
+  }
+
+  .ab__goal {
+    h5 {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 120%;
+      color: #9db4d3;
+    }
+  }
+}
+
+.ab__service {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  .abService__img {
+    img {
+      max-width: inherit;
+    }
+  }
+
+  .abService__content {
+    h6 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+      color: #ffc700;
+    }
+  }
+}
+
+.ab__investor {
+  h5 {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 120%;
+    color: #9db4d3;
+  }
+}
+
+// INVENTORY CSS
+.inven__box {
+  background: linear-gradient(
+    96.78deg,
+    rgba(255, 255, 255, 0.03) 1.73%,
+    rgba(255, 255, 255, 0) 106.49%
+  );
+  border-radius: 50px;
+  padding: 50px 80px;
+  border: solid 1px #8080804f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1058px;
+
+  .inven__content {
+    h3 {
+      font-weight: 400;
+      font-size: 31px;
+      line-height: 120%;
+      color: #9db4d3;
+    }
+
+    p {
+      width: 80%;
+    }
+
+    a {
+      color: black !important;
+    }
+  }
+}
+
+.inven__itemBox {
+  .inven_p2 {
+    border: 1px solid #ffc700;
+    border-radius: 8px;
+    gap: 12px;
+    width: fit-content;
+    color: #ffc700 !important;
+  }
+
+  .inven_p {
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    gap: 12px;
+    width: fit-content;
+    color: white !important;
+  }
+}

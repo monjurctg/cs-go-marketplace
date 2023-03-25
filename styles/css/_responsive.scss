@@ -1,0 +1,1124 @@
+// =============== RESPONSIVE =================
+
+@media all and (max-width: 1600px) {
+  .msg {
+    bottom: -15px !important;
+    transform: translateY(15px) !important;
+  }
+  // .up {
+  //     bottom: 60px !important;
+  // }
+  .market__items {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .msg {
+    bottom: -24px !important;
+    transform: translateY(24px) !important;
+  }
+  .sort-by-text {
+    font-size: 13px;
+  }
+  .s__sub-dropDown {
+    p {
+      font-size: 13px;
+    }
+  }
+  .inven__box {
+    width: 100%;
+    padding: 40px 50px;
+  }
+  .market__items {
+    grid-template-columns: repeat(4, 1fr) !important;
+    // .mrkt_item{
+    //   width: 195px;
+
+    // }
+    // gap: 10px;
+  }
+  .header__sortList .sortList ul {
+    gap: 22px;
+  }
+
+  .header_area .header__slider .bt__deals {
+    width: 90%;
+  }
+
+  .header_area .h_nav {
+    gap: 65px;
+  }
+
+  .header_area .headerSwiper .swiper-button-prev {
+    right: 11%;
+  }
+}
+@media all and (max-width: 1260px) {
+  .container {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+  .market__items {
+    grid-template-columns: repeat(4, 1fr) !important;
+    // .mrkt_item{
+    //   width: 245px;
+
+    // }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  // .mrkt_item {
+  //   flex-grow: 1;
+  // }
+  .mar__sliderItems {
+    margin-top: 30px !important;
+  }
+  .modal__box {
+    &.small-modal {
+      width: 60%;
+    }
+  }
+  .medium {
+    display: block !important;
+  }
+  .header__sortList {
+    display: none !important;
+  }
+  // .market__items {
+  //   grid-template-columns: repeat(3, 218px) !important;
+  // }
+
+  .sortList {
+    width: 100%;
+  }
+
+  .header__sortList .sortList ul {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .header__sortList .searchList {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .blog .blog_content a i {
+    margin-top: 2px;
+  }
+
+  .blog .blog_content a {
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .blog .blog_content p {
+    font-size: 14px;
+  }
+
+  .blog .blog_content h5 {
+    font-size: 20px;
+  }
+
+  .blog .blog_img img {
+    height: inherit;
+  }
+
+  .section_center {
+    width: 100%;
+  }
+
+  .general__accor .g_accorItem {
+    width: 100%;
+  }
+
+  .dis_content .range {
+    width: 100%;
+  }
+
+  .header_area .headerSwiper .swiper-button-prev {
+    right: 13%;
+  }
+
+  // .account .account_content .account__text {
+  //   left: 45%;
+  //   width: 50%;
+  // }
+
+  .header_area .header__slider .bt__deals h4 {
+    font-size: 34px;
+  }
+  .dis_content .range {
+    width: 380px !important;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .in_game_btn {
+    padding: 14px 8px 14px 8px !important;
+    width: 150px !important;
+    font-size: 14px !important;
+  }
+  .btn-230 {
+    padding: 14px 8px 14px 8px !important;
+    width: 150px !important;
+    font-size: 14px !important;
+  }
+  .question {
+    width: 23rem !important;
+  }
+  .modal__box {
+    &.small-modal {
+      width: 60%;
+    }
+  }
+  .card-withdraw {
+    width: 80% !important;
+  }
+  .disImg_big2 {
+    img {
+      width: 100% !important;
+    }
+  }
+  .dis_content {
+    .range {
+      width: 100% !important;
+    }
+  }
+  .balance__box {
+    padding: 28px;
+  }
+  .market__items {
+    grid-template-columns: repeat(4, 1fr) !important;
+    // .mrkt_item{
+    //   width: 250px;
+
+    // }
+  }
+
+  .inven__box .inven__content h3 {
+    font-size: 28px;
+  }
+
+  .inven__box {
+    padding: 30px 40px;
+  }
+
+  .filter__fixed .btn {
+    width: fit-content;
+  }
+
+  .filter__fixed .filter {
+    border: none !important;
+  }
+
+  .header__sortList .searchList .search {
+    width: 100%;
+  }
+
+  .menu .sub__menu li {
+    border-bottom: none;
+  }
+
+  .menu .sub__menu {
+    // position: inherit;
+    background: #0e0726;
+    border: none;
+    border-radius: none;
+    // visibility: visible !important;
+    // opacity: 1 !important;
+  }
+
+  // ======================= sortlist not display
+  // .sort__dropDown {
+  //   display: none !important;
+  // }
+
+  .sortList {
+    display: none !important;
+  }
+
+  .filter__fixed {
+    display: none !important;
+  }
+
+  // ==================================
+
+  // ============================== modal type
+  // .sortList {
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     background: #0E0726;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: 9999;
+  //     padding: 35px;
+  // }
+
+  // .sort__dropDown {
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     background: #0E0726;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: 9999;
+  //     padding: 35px;
+  // }
+
+  // .filter__fixed {
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     background: #0E0726;
+  //     width: 100%;
+  //     height: 100% !important;
+  //     z-index: 9999;
+  //     padding: 35px;
+  // }
+
+  // ===================================
+
+  .header__sortList .sortList ul li a {
+    color: white !important;
+  }
+
+  .sortList h2 {
+    display: flex;
+  }
+
+  .sort__dropDown h2 {
+    display: flex;
+  }
+
+  .settion__icon {
+    text-align: center;
+  }
+
+  .setting__title a {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .blog .blog_content span {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .blog .blog_content {
+    padding: 18px;
+  }
+
+  .blog .blog_img img {
+    height: 332px;
+  }
+
+  .general__accor .g_accorItem {
+    padding: 14px;
+  }
+
+  .general__accor .g_accorItem h2 {
+    font-size: 15px;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .mr__filter {
+    // overflow: auto;
+    // height: 65px;
+  }
+
+  .mr__filter .filter {
+    border-radius: 6px;
+    padding: 18px;
+    border-bottom: inherit;
+    border: solid 2px #2c1f59;
+    margin-bottom: 8px;
+  }
+
+  .section__title h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  // .dis_content .range {
+  //   width: 505px !important;
+  // }
+
+  .discountItems__area .dis__img {
+    gap: 70px !important;
+    justify-content: center !important;
+  }
+
+  .discountItems__area .dis__title h3 {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .djSell__footerContent .fc__total span {
+    font-size: 30px !important;
+  }
+
+  // .sellWant {
+  //   font-size: 20px;
+  // }
+
+  // .sellNeed {
+  //   font-size: 20px;
+  // }
+
+  .dj__sellOption .dj__op span {
+    font-size: 16px;
+  }
+
+  .dj__sellOption .dj__op {
+    padding: 12px;
+  }
+
+  .dj__sellOption .dj__p p {
+    font-size: 13px;
+  }
+
+  .djSell_box {
+    padding: 24px;
+  }
+
+  .djSell_box .djPro__img p {
+    font-size: 20px;
+  }
+
+  .djSell_box .djPro__img span {
+    font-size: 12px;
+  }
+
+  .header_area .h_nav {
+    gap: 25px;
+  }
+
+  .marketPlace .marketPlace__items .mpItems__list {
+    width: 50%;
+  }
+
+  .marketPlace .marketPlace__items {
+    gap: 15px;
+  }
+
+  .header_area h3 {
+    width: 80%;
+  }
+
+  .header_area .header__slider {
+    flex-direction: column;
+  }
+
+  .headerSwiper {
+    width: 100%;
+  }
+
+  .header_area .headerSwiper .swiper-button-prev {
+    right: 55%;
+  }
+
+  .header_area .headerSwiper .swiper-button-next {
+    right: 45%;
+  }
+
+  .header_area .headerSwiper .swiper-pagination-fraction {
+    right: 49.8%;
+  }
+
+  // .account .account_content .account__text {
+  //   position: initial;
+  //   transform: inherit;
+  //   width: 100%;
+  // }
+
+  .account .account_content {
+    padding: 50px;
+  }
+
+  // .container, .container-lg, .container-md, .container-sm {
+  //     max-width: 960px;
+  // }
+}
+
+@media all and (max-width: 828px) {
+  .market__items {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .marketPlace {
+    .marketPlace__items {
+      gap: 15px;
+      .mpItems__list {
+        h5 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 875px) {
+  .in_game_btn {
+    width: 100% !important;
+  }
+  .btn-230 {
+    width: 100% !important;
+    // font-size: 14px !important;
+  }
+  .share-h {
+    width: 174px !important;
+    // display: flex;
+  }
+  .msg {
+    bottom: -17px !important;
+    transform: translateY(17px) !important;
+  }
+
+  .sort__dropDown {
+    display: none !important;
+  }
+  .inven__itemBox .inven_p {
+    // display: none !important;
+  }
+  .medium {
+    display: none !important;
+  }
+  .small {
+    display: block !important;
+  }
+  .searchList .search {
+    width: 100% !important;
+  }
+  .sl_btn {
+    width: fit-content !important;
+  }
+  .mr__filter {
+    position: absolute;
+    background: #100635;
+    width: 0;
+    opacity: 0;
+    transition: 1s;
+    padding: 20px;
+    top: 50px;
+    left: -10px;
+    transform: translateX(-610px);
+  }
+  .market__items {
+    grid-template-columns: repeat(3, 1fr) !important;
+    justify-content: space-between;
+    gap: 20px;
+    // .mrkt_item{
+    //   width: 210px;
+
+    // }
+    // justify-content: center;
+    align-items: center;
+  }
+
+  .inven__box {
+    padding: 30px;
+    flex-direction: column-reverse;
+    border: none;
+    background: none;
+  }
+
+  .dn img {
+    height: inherit !important;
+  }
+
+  .blog .blog_img img {
+    width: 100%;
+  }
+
+  .blog {
+    flex-direction: column;
+  }
+
+  .mr__filter .filter label,
+  .mr__filter .filter a {
+    font-size: 16px;
+  }
+
+  .section__title h1 {
+    font-size: 26px;
+  }
+
+  .discountItems__area .dis__img .disImg_small {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .discountItems__area .dis__img {
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .djSell__footerContent {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .djPro__content {
+    width: 100%;
+  }
+
+  .dj__img {
+    text-align: center;
+  }
+
+  .djSell_box .djPro__img {
+    width: 100%;
+  }
+
+  .djSell_box {
+    flex-direction: column;
+  }
+
+  .h_btn {
+    // width: 100%;
+  }
+
+  // .btn {
+  //   width: 100%;
+  // }
+
+  .discountItems__area .dis__title p {
+    font-size: 15px !important;
+  }
+
+  .dis_content span {
+    font-size: 13px !important;
+  }
+
+  .dis_content h2 {
+    font-size: 23px !important;
+  }
+
+  .dis_content .dis_avater h2 {
+    font-size: 26px;
+  }
+
+  .dis_content p {
+    font-size: 15px;
+  }
+
+  .discountItems__area .dis__title span {
+    font-size: 14px !important;
+  }
+
+  .modal__dis h3 {
+    font-size: 28px !important;
+  }
+
+  .dj__sellOption .dj__op input {
+    font-size: 14px;
+  }
+
+  .dj__sellOption .dj__p {
+    width: 100%;
+  }
+
+  .djSell__footerContent .fc__total span {
+    font-size: 25px;
+  }
+
+  .fc__text p {
+    font-size: 15px;
+  }
+
+  .dj__sellOption .dj__op span {
+    font-size: 16px;
+  }
+
+  .djSell_box .djPro__img span {
+    font-size: 10px;
+  }
+
+  .djSell_box .djPro__img p {
+    font-size: 15px;
+  }
+
+  // .sellWant {
+  //   font-size: 15px;
+  // }
+
+  // .sellNeed {
+  //   font-size: 15px;
+  // }
+
+  .kyc_t {
+    font-size: 20px !important;
+    margin-bottom: 20px;
+  }
+
+  .modal__box .modal__title {
+    // margin-bottom: 24px;
+  }
+
+  .dipo__amount {
+    padding: 12px 14px;
+  }
+
+  .deposit .pay p span {
+    font-size: 18px;
+  }
+
+  .deposit .pay p {
+    font-size: 18px;
+  }
+
+  .deposit .pay .pay__tran {
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .deposit .pay h4 {
+    font-size: 25px;
+  }
+
+  .balance span {
+    font-size: 18px;
+  }
+
+  .balance {
+    font-size: 15px;
+  }
+
+  .deposit .pay .pay__img {
+    padding: 60px 40px;
+  }
+
+  .modal__text p {
+    font-size: 15px;
+  }
+
+  .modal__text h2 {
+    font-size: 32px;
+  }
+
+  .success img {
+    width: 184px;
+    height: 184px;
+  }
+
+  .succes__text {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+
+  .btn {
+    padding: 12px 24px 12px 24px;
+    font-size: 15px;
+    // width: 100%;
+  }
+
+  .modal__box .modal__title .title h2 {
+    font-size: 24px;
+  }
+
+  .mrkt_item .dis__price .dis span {
+    font-size: 10px;
+  }
+
+  .mrkt_item .dis__price .pinCode p {
+    font-size: 15px;
+  }
+
+  .modal__box .modal__content .innr .take {
+    font-size: 15px;
+  }
+
+  .modal__box .modal__content .innr .cancel {
+    font-size: 14px;
+  }
+
+  .h_btn {
+    padding: 12px 18px 12px 18px;
+    font-size: 15px;
+    // width: 100%;
+  }
+
+  .mrkt_item .dis__price .dis span {
+    font-size: 10px;
+  }
+
+  .modal__box .modal__title .title p {
+    font-size: 14px;
+  }
+
+  .modal__box .modal__title .off i {
+    font-size: 22px;
+  }
+
+  .modal__box {
+    padding: 40px;
+    width: 100%;
+  }
+
+  .mrkt_item h6 {
+    font-size: 12px;
+    height: 20px;
+  }
+
+  .modal__box .modal__content .trade {
+    font-size: 15px;
+  }
+
+  .marketPlace {
+    background-position: 84% -53%;
+  }
+  .modal__box {
+    &.small-modal {
+      width: 60%;
+    }
+  }
+}
+
+@media all and (max-width: 567px) {
+  .border {
+    display: block !important;
+    margin: 0px 0px !important;
+  }
+  .dis_content span {
+    margin-bottom: 2px !important;
+  }
+  .dis_content .dis_avater h2 span {
+    margin-top: 4px !important;
+  }
+  .discountItems__area .dis__title h3 {
+    font-size: 25px !important;
+  }
+  .mar__slider {
+    margin-top: 40px;
+  }
+  .account .account_content {
+    padding: 41px;
+  }
+  .account .account_content .account__text {
+    transform: translateY(-50%);
+    width: 100%;
+    margin-left: 45px;
+  }
+  .modal__box {
+    &.small-modal {
+      width: 100%;
+    }
+  }
+  .bDeals__img {
+    width: 110px;
+    // height: 80px;
+  }
+  .share {
+    display: flex !important;
+  }
+  .share-h {
+    display: none;
+  }
+  .pagination {
+    // flex-direction: column;
+    gap: 20px;
+  }
+  .market__items {
+    grid-template-columns: repeat(2, 1fr) !important;
+    // .mrkt_item{
+    //   width: 200px;
+
+    // }
+  }
+
+  .settion__icon .upload i {
+    font-size: 20px;
+  }
+
+  .settion__icon .upload {
+    top: 88%;
+    padding: 12px 14px;
+  }
+
+  .gene__title input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .gene__box {
+    padding: 26px;
+  }
+
+  .gene__title p {
+    font-size: 14px;
+  }
+
+  .gene__title span {
+    font-size: 16px;
+  }
+
+  .profile__info form label {
+    font-size: 14px;
+  }
+
+  .profile__info form input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .setting__status span {
+    font-size: 12px;
+  }
+
+  .setting__status .vari {
+    font-size: 18px;
+  }
+
+  .setting__status p {
+    font-size: 18px;
+  }
+
+  .ab__service {
+    gap: 18px;
+  }
+
+  .ab__para .ab__goal h5 {
+    font-size: 20px;
+  }
+
+  .ab__para p {
+    font-size: 14px;
+  }
+
+  .section__title h1 {
+    font-size: 22px;
+  }
+
+  .blog .blog_content a {
+    font-size: 11px;
+    gap: 10px;
+  }
+
+  .blog .blog_content {
+    padding: 12px;
+  }
+
+  .blog .blog_content p {
+    font-size: 12px;
+  }
+
+  .blog .blog_content h5 {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .modal__box .modal__title .off {
+    right: 13px;
+    top: 9px;
+  }
+
+  .modal__box .modal__title .off i {
+    font-size: 18px;
+  }
+
+  .discountItems__area .dis__img .disImg_big img {
+    width: 300px !important;
+    height: 228px !important;
+  }
+
+  .dis__input {
+    width: 100%;
+  }
+
+  .dis_content {
+    .range {
+      width: 100% !important;
+    }
+  }
+
+  .sellNeed {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .dj__sellOption {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .dipo__amount input {
+    font-size: 12px;
+  }
+
+  .balance span {
+    font-size: 18px;
+  }
+
+  .balance {
+    font-size: 12px;
+  }
+
+  .modal__box {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    height: 100%;
+  }
+  .modal__box .modal__title .title p {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .dj__sellOption .dj__p p {
+    // text-align: center;
+    font-size: 15px;
+  }
+  .sellWant {
+    font-size: 20px;
+    text-align: center;
+  }
+  .djSell_box {
+    padding: 6px;
+  }
+
+  .pay__img img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .deposit .pay .pay__img {
+    padding: 40px 26px;
+  }
+
+  .modal__box {
+    padding: 10px;
+  }
+
+  .discountItems__area .dis__title {
+    margin-bottom: 25px;
+  }
+
+  .discountItems__area .dis__img {
+    justify-content: center;
+  }
+
+  .modal__box .modal__content .modal__btn {
+    flex-direction: column;
+  }
+
+  .h_btn {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .success {
+    gap: 44px;
+  }
+
+  .success {
+    gap: 44px;
+  }
+
+  .modal__box .modal__title .title h2 {
+    font-size: 18px;
+  }
+
+  .modal__box .modal__content .innr {
+    flex: inherit;
+  }
+
+  .market__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .marketPlace {
+    background-position: 74% -21%;
+  }
+
+  .marketPlace .marketPlace__items .mpItems__list {
+    width: 100%;
+  }
+
+  .marketPlace .marketPlace__items {
+    flex-direction: column;
+  }
+
+  .header_area .headerSwiper .swiper-button-next {
+    right: 40%;
+  }
+
+  .header_area .headerSwiper .swiper-pagination-fraction {
+    right: 46.8%;
+  }
+}
+
+@media all and (max-width: 467px) {
+  .dojo_btns {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .dots-show {
+    width: 160px;
+    height: 80px;
+    top: 25px;
+    right: -5px;
+  }
+  .card-details {
+    .mod__id {
+      display: block !important;
+    }
+  }
+  .question {
+    width: 15rem !important;
+    p {
+      font-size: 13px !important;
+    }
+    span {
+      font-size: 10px !important;
+    }
+  }
+  .dis_content {
+    margin-top: 20px !important;
+  }
+  .msg {
+    bottom: -30px !important;
+    transform: translateY(30px) !important;
+  }
+  .pinCode p {
+    font-size: 13px !important;
+  }
+  .dis p {
+    font-size: 16px !important;
+  }
+  .steam-price {
+    font-size: 14px !important;
+  }
+  .account .account_content .account__text {
+    transform: translateY(-36%);
+    width: 100%;
+    margin-left: 45px;
+  }
+  .btn-withdraw,
+  .btn-sell {
+    width: 100%;
+    justify-content: center;
+  }
+  .market__items {
+    grid-template-columns: repeat(2, 1fr) !important;
+    .mrkt_item {
+      padding: 5px;
+      .steam-p {
+        font-size: 12px;
+      }
+    }
+  }
+}
