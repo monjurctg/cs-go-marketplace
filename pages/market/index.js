@@ -103,9 +103,92 @@ function Index() {
     setloader(false);
   }, [pageData.page]);
 
+  let marketData = [
+    {
+      img: "/img/330x192 (1) 1 (1).png",
+      percent: 12.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 1,
+      restraction: 7,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+  ];
+
   let marketItem = "";
-  if (mdsData?.data?.data?.length > 0) {
-    marketItem = mdsData?.data?.data?.map((item, index) => (
+  if (marketData.length > 0) {
+    marketItem = marketData.map((item, index) => (
       <MarketItem key={index} item={item} module={"market"} />
     ));
   }
@@ -113,7 +196,7 @@ function Index() {
     <InventoryLayout fname={"Market"}>
       <div className="col-md-12 col-lg-9">
         <h3 className="mb-4">Market</h3>
-        {mdsData?.data?.data?.length > 0 && !loader ? (
+        {marketData?.length > 0 && !loader ? (
           <div className="market__items mb-5 d-grid align-items-center">
             {marketItem}
           </div>

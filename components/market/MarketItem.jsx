@@ -27,21 +27,15 @@ function MarketItem({item, module}) {
   return (
     <a className="mrkt_item position-relative">
       <h6>
-        {item?.asset_details?.details?.name?.slice(0, 20)}{" "}
-        <span>
-          {item?.asset_details?.details?.market_buy_country_restriction ?? "FN"}
-        </span>
+        {item?.name?.slice(0, 20)} <span>{"FN"}</span>
       </h6>
       <div className="">
         <Image
           style={{cursor: "pointer"}}
           onClick={() => {
-            Router.push(`market/${item?.asset_details?.asset_id}`);
+            Router.push(`market/1}`);
           }}
-          src={
-            item?.asset_details?.details?.icon_url ??
-            item?.asset_details?.details?.icon_url
-          }
+          src={item?.img}
           sizes="100vw"
           width={100}
           height={100}
@@ -52,25 +46,15 @@ function MarketItem({item, module}) {
       </div>
       <div className="mb-2">
         <div className="d-flex justify-content-between mb-2">
-          {item?.recommended_price > item?.bot_price ? (
-            <p
-              style={{
-                fontWeight: 400,
-                fontSize: 13,
-                lineHeight: "120%",
-                color: "#05BB59",
-              }}>
-              {getPercentage(
-                item?.recommended_price,
-                item?.bot_price,
-
-                item?.fee
-              )}
-              %
-            </p>
-          ) : (
-            <p></p>
-          )}
+          <p
+            style={{
+              fontWeight: 400,
+              fontSize: 13,
+              lineHeight: "120%",
+              color: "#05BB59",
+            }}>
+            {item?.percent}%
+          </p>
 
           <p
             style={{
@@ -80,9 +64,7 @@ function MarketItem({item, module}) {
 
               color: "#9DB4D3",
             }}>
-            {item?.asset_details?.float_value
-              ? parseFloat(item?.asset_details?.float_value).toFixed(3)
-              : "0.000"}
+            {item?.floatValue}
           </p>
         </div>
 
@@ -96,7 +78,7 @@ function MarketItem({item, module}) {
             {/* <i className="fa-brands fa-steam-symbol"></i> */}$
             {calculatePercentage(item?.bot_price, item?.fee)}
           </p>
-          {item?.asset_details?.details?.market_tradable_restriction > 0 ? (
+          {item?.restraction > 0 ? (
             <div
               className="d-flex align-items-center position-relative"
               style={{gap: 4, cursor: "pointer"}}
@@ -116,9 +98,7 @@ function MarketItem({item, module}) {
                 width={13}
                 className="lock-img"
               />
-              <p>
-                {item?.asset_details?.details?.market_tradable_restriction}D
-              </p>
+              <p>{item?.restraction}D</p>
             </div>
           ) : (
             <div style={{marginTop: 5}} className=" position-relative">
@@ -147,11 +127,7 @@ function MarketItem({item, module}) {
       </p>
       <AiFillCaretUp className="up" />
       <div
-        className={
-          item?.asset_details?.details?.market_tradable_restriction > 0
-            ? "msg"
-            : "d-none"
-        }
+        className={item?.restraction > 0 ? "msg" : "d-none"}
         id={"msg" + item?.id}>
         These item is currently trade locked by Steam, you will able to withdraw
         the item after trade lock expires
