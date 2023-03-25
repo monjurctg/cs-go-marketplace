@@ -13,16 +13,16 @@ export const withAuth = (Component) => {
 
     const dispatch = useDispatch();
     const router = useRouter();
-    const checkToken = async (token) => {
-      const res = await AuthServices.checkToken(token);
-      // console.log('res', res)
-      if (res.status === 200) {
-        setauth(true);
-      } else {
-        removeToken();
-        dispatch(setOpenModal());
-      }
-    };
+    // const checkToken = async (token) => {
+    //   const res = await AuthServices.checkToken(token);
+    //   // console.log('res', res)
+    //   if (res.status === 200) {
+    //     setauth(true);
+    //   } else {
+    //     removeToken();
+    //     dispatch(setOpenModal());
+    //   }
+    // };
 
     // console.log('auth', auth)
 
@@ -35,7 +35,7 @@ export const withAuth = (Component) => {
         dispatch(setOpenModal());
       } else {
         // console.log('hi')
-        checkToken(token);
+        // checkToken(token);
       }
     }, [router]);
 

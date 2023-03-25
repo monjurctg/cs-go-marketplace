@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import AuthServices from "../../../services/AuthServices";
 import CompleteProfile from "./CompleteProfile";
 import ItemOnSale from "./ItemOnSale";
-
+import {setToken} from "../../../utils/helperFunctions";
 import LoginDisclaimer from "./LoginDisclaimer";
 import Market from "./Market";
 import MyInventory from "./MyInventory";
@@ -26,21 +26,17 @@ function InitailProcess({isShow, setClose}) {
   };
   let authentication = async () => {
     setLoading(true);
-    let res = await AuthServices.Steamlogin();
-
-    if (res.status === 200) {
+    // let res = await AuthServices.Steamlogin();
+    setTimeout(() => {
       setLoading(false);
       localStorage.setItem("trade_modal_on", true);
-      console.log("res) steam log", res);
+      setToken("tokendkdjkdjdkdkjdkjdkfjdfd");
+      // console.log("res) steam log", res);
       // setStep(5);
       setClose(false);
-      router.push(res.data[0]);
+      router.push("/");
+    }, 1000);
 
-      // onSkip();
-    } else {
-      setLoading(false);
-      console.log(res, "res ");
-    }
     // console.log("res", res);
   };
 

@@ -87,20 +87,20 @@ function Navbar() {
     console.log(route, e, "route from funtion");
     e.preventDefault();
     if (
-      userProfile?.data?.steam_user_info?.username &&
+      // userProfile?.data?.steam_user_info?.username &&
       route === "/steam-inventory"
     ) {
       router.push(route);
 
       return;
     } else if (
-      userProfile?.data?.steam_user_info?.username &&
+      // userProfile?.data?.steam_user_info?.username &&
       route === "/dojo-inventory"
     ) {
       router.push(route);
       return;
     } else if (
-      userProfile?.data?.steam_user_info?.username &&
+      // userProfile?.data?.steam_user_info?.username &&
       route === "/items-on-sale"
     ) {
       router.push(route);

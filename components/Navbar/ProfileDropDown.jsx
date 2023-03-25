@@ -22,7 +22,7 @@ function ProfileDropDown({
                 style={{
                   marginRight: 6,
                 }}>
-                Hi, {userProfile?.data?.steam_user_info?.username}
+                Hi, Monjur
               </span>
               <i
                 className={`fa-solid dropdown-icon fa-angle-down   ${
