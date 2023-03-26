@@ -63,19 +63,19 @@ function Index() {
   };
 
   useEffect(() => {
-    fetchBolgs();
+    // fetchBolgs();
   }, []);
 
   // console.log(blogData[0], "blogs page");
 
-  const blog = blogs.map((blog, index) => (
+  const blog = blogs2.map((blog, index) => (
     <>
       <div className="col-md-6" key={index}>
         <div className="blog mt-4">
           <div className="blog_img">
             <img
               className="image"
-              src={blog?.photo?.img_url}
+              src={blog?.img}
               // height={300}
               sizes="(max-width: 768px) 100vw,
           (max-width: 1200px) 50vw,

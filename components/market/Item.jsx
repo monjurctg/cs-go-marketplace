@@ -145,29 +145,22 @@ function Item({item, module, pageData}) {
     <>
       <a className="mrkt_item" style={{cursor: "pointer"}}>
         <h6>
-          {item?.asset_details?.details?.name?.slice(0, 20)}{" "}
-          <span>
-            {item?.asset_details?.details?.market_buy_country_restriction ??
-              "FN"}
-          </span>
+          {item?.name?.slice(0, 20)} <span>{item?.restraction ?? "FN"}</span>
         </h6>
         <div
           className=""
           onClick={() => {
             if (module === "itemOnSale" || module == "/featured/shop/[id]") {
               // console.log('first')
-              Router.push(`/market/${item?.asset_details?.asset_id}`);
+              Router.push(`/market/${item?.id}`);
             } else {
               // console.log('2nd')
 
-              Router.push(`${module}/${item?.asset_details?.asset_id}`);
+              Router.push(`${module}/${item?.id}`);
             }
           }}>
           <Image
-            src={
-              item?.asset_details?.details?.icon_url ??
-              item?.asset_details?.details?.icon_url
-            }
+            src={item?.img}
             sizes="100vw"
             width={100}
             height={100}
@@ -207,11 +200,11 @@ function Item({item, module, pageData}) {
       </div> */}
         <div
           className={`d-flex ${
-            item?.asset_details?.float_value !== null
+            item?.floatValue !== null
               ? "justify-content-between"
               : "justify-content-end"
           } mb-1 align-items-center`}>
-          {item?.asset_details?.float_value !== null ? (
+          {item?.floatValue !== null ? (
             <span
               style={{
                 fontWeight: 400,
@@ -220,11 +213,11 @@ function Item({item, module, pageData}) {
                 marginTop: 5,
                 color: " #9DB4D3",
               }}>
-              {item?.asset_details?.float_value == 0
+              {item?.floatValue == 0
                 ? "0.000"
-                : item?.asset_details?.float_value == null
+                : item?.floatValue == null
                 ? "null"
-                : item?.asset_details?.float_value?.toFixed(3)}
+                : item?.floatValue?.toFixed(3)}
             </span>
           ) : (
             ""
@@ -246,7 +239,7 @@ function Item({item, module, pageData}) {
           </p>
         </div> */}
           <div className="d-flex justify-content-end lock-img">
-            {item?.asset_details?.details?.market_tradable_restriction > 0 ? (
+            {item?.restraction > 0 ? (
               <>
                 <Image
                   src="/img/lock.svg"
@@ -255,9 +248,7 @@ function Item({item, module, pageData}) {
                   height={15}
                   width={13}
                 />
-                <p>
-                  {item?.asset_details?.details?.market_tradable_restriction}D
-                </p>
+                <p>{item?.restraction}D</p>
               </>
             ) : (
               <div style={{marginTop: 5}}>
@@ -328,16 +319,10 @@ function Item({item, module, pageData}) {
                   <img src={"images/disable.svg"} alt="" />
                   <p
                     onClick={async () => {
-                      let res = await MarketService.delist(
-                        item?.asset_details?.asset_id
-                      );
                       // console.log('res', res)
-                      if (res?.status == 200) {
-                        // console.log('res', res)
-                        dispatch(itemOnSaleApiCall());
-                        showModal(item.id);
-                        successNotification("Item delisted successfully");
-                      }
+                      // dispatch(itemOnSaleApiCall());
+                      showModal(item.id);
+                      successNotification("Item delisted successfully");
                     }}>
                     Delist item
                   </p>

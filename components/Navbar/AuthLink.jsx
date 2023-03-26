@@ -32,12 +32,12 @@ function AuthLink({
     if (res?.status === 200) {
       setUnReadNoti(res.data.data);
 
-      dispatch(setUnreadNotiLength(res.data.unread_notification_count));
+      // dispatch(setUnreadNotiLength(res.data.unread_notification_count));
     }
   };
 
   useEffect(() => {
-    notifactions();
+    // notifactions();
   }, []);
 
   return (

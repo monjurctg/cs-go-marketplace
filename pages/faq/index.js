@@ -9,8 +9,32 @@ import Footer from "../../components/ui/Footer";
 import Navbar from "../../components/ui/Navbar";
 import faqService from "../../services/faqServices";
 
+const cat = [
+  {
+    name: "category 1",
+  },
+];
+const faqData = [
+  {
+    id: 1,
+    ques: "how are you?",
+    ans: "I am fine",
+  },
+  {id: 2, ques: "how old are you?", ans: "I am 20 years old"},
+  {
+    id: 3,
+    ques: "what is react?",
+    ans: `
+  React is a JavaScript library created by Facebook
+  
+  React is a User Interface (UI) library
+  
+  React is a tool for building UI components`,
+  },
+];
+
 function Index() {
-  const [faqData, setFaqData] = useState([]);
+  // const [faqData, setFaqData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [faqCategory, setFaqCategory] = useState([]);
 
@@ -44,8 +68,8 @@ function Index() {
     </div>
   );
 
-  if (faqCategory.length > 0) {
-    faqCategoryData = faqCategory.map((faqCat, index) => (
+  if (cat.length > 0) {
+    faqCategoryData = cat.map((faqCat, index) => (
       <div key={index} className="filter">
         <a
           href="#"

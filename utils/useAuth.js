@@ -37,7 +37,7 @@ export const withAuth = (Component) => {
         // console.log('hi')
         // checkToken(token);
       }
-    }, [router]);
+    }, [dispatch, router]);
 
     return auth ? <Component {...props} /> : null;
 

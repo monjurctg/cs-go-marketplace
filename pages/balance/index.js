@@ -18,7 +18,32 @@ const Index = () => {
   const [defaltModalShow, setDefaultModalShow] = useState(false);
   const [depositOrWithdraw, setDepositOrWithdraw] = useState("");
   const [loading, setLoading] = useState(false);
-  const [balanceHistoryData, setBalanceHistoryData] = useState([]);
+  const [balanceHistoryData, setBalanceHistoryData] = useState([
+    {
+      date: "1/2/2023",
+      type: "Diposit",
+      amount: 230,
+      payment_method: "paypal",
+    },
+    {
+      date: "1/2/2023",
+      type: "Diposit",
+      amount: 230,
+      payment_method: "paypal",
+    },
+    {
+      date: "3/2/2023",
+      type: "withdraw",
+      amount: 420,
+      payment_method: "stripe",
+    },
+    {
+      date: "1/2/2023",
+      type: "Diposit",
+      amount: 230,
+      payment_method: "paypal",
+    },
+  ]);
   const userProfile = useSelector((state) => state.auth.userProfile);
   // console.log(userProfile.data.steam_user_info.avatar, "user profile");
 
@@ -45,7 +70,7 @@ const Index = () => {
   };
 
   useEffect(() => {
-    getBalanceTransaction();
+    // getBalanceTransaction();
   }, []);
 
   if (loading) {
@@ -81,12 +106,7 @@ const Index = () => {
                   <div className="col-12 col-sm-6 col-lg-4 mb-4 mb-md-0">
                     <div className="balance__box">
                       <p>Total Balance</p>
-                      <h5>
-                        $
-                        {parseFloat(
-                          userProfile?.data?.steam_user_info?.balance
-                        ).toFixed(2)}
-                      </h5>
+                      <h5>$ 1200</h5>
                       <button
                         className="btn"
                         onClick={() => handleEventClick("deposit")}>
@@ -97,13 +117,7 @@ const Index = () => {
                   <div className="col-12 col-sm-6 col-lg-4">
                     <div className="balance__box">
                       <p>Withdrawable</p>
-                      <h5 style={{color: "#FFC700"}}>
-                        ${" "}
-                        {balancePercentageReduce(
-                          userProfile?.data?.steam_user_info?.balance,
-                          5
-                        )}
-                      </h5>
+                      <h5 style={{color: "#FFC700"}}>$1270</h5>
 
                       <button
                         className="h_btn"
@@ -209,4 +223,4 @@ const Index = () => {
   }
 };
 
-export default withAuth(Index);
+export default Index;

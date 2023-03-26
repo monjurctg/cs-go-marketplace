@@ -10,6 +10,89 @@ import {itemOnSaleApiCall} from "../../redux/actions/staticBarActions";
 
 import {withAuth} from "../../utils/useAuth";
 
+let marketData = [
+  {
+    img: "/img/330x192 (1) 1 (1).png",
+    percent: 12.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 1,
+    restraction: 7,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+  {
+    img: "/img/330x192 (1) 1 (3).png",
+    percent: 11.2,
+    floatValue: 0.0,
+    fee: 5,
+    recommended_price: 34,
+    bot_price: 45,
+    id: 2,
+    restraction: 0,
+  },
+];
+
 function Index() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const userProfile = useSelector((state) => state.auth.userProfile);
@@ -35,7 +118,7 @@ function Index() {
   useEffect(() => {
     // if (window) setreload(false);
     // getItemOnSaleData();
-    dispatch(itemOnSaleApiCall(pageData));
+    // dispatch(itemOnSaleApiCall(pageData));
     // itemOnSaleApiCall
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -48,7 +131,7 @@ function Index() {
     };
   }, [pageData.page]);
 
-  const marketItem = itemOnSaleData?.data?.map((item, index) => (
+  const marketItem = marketData?.map((item, index) => (
     <Item key={index} item={item} module={"itemOnSale"} pageData={pageData} />
   ));
   const shareShop = async () => {
@@ -102,17 +185,17 @@ function Index() {
         </div>
         <div className="inven__itemBox">
           <div className="market__items flex-wrap d-grid  mb-5 align-items-center">
-            {itemOnSaleData?.data?.length > 0 && <>{marketItem}</>}
+            {marketData?.length > 0 && <>{marketItem}</>}
           </div>
-          {itemOnSaleData?.data?.length > 0 && (
+          {marketData?.length > 0 && (
             <Paginition
               setPagaData={setPagaData}
               pageData={pageData}
-              pageLength={itemOnSaleData?.meta?.last_page}
+              pageLength={2}
             />
           )}
 
-          {itemOnSaleData?.data?.length === 0 && (
+          {marketData?.length === 0 && (
             <NoItem
               discription={"Seems like you don’t have any items on sale."}
               from={"steam"}
@@ -126,4 +209,4 @@ function Index() {
   );
 }
 
-export default withAuth(Index);
+export default Index;

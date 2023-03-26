@@ -21,7 +21,38 @@ function BestDetails() {
   const [currentValue, setCurrentValue] = useState(1);
   const [isChange, setIsChange] = useState(false);
   const [total, setTotal] = useState(null);
-  const [bestDeals, setBestDeals] = useState([]);
+  const [bestDeals, setBestDeals] = useState([
+    {
+      img: "/img/330x192 (1) 1 (1).png",
+      percent: 12.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 1,
+      restraction: 7,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+    {
+      img: "/img/330x192 (1) 1 (3).png",
+      percent: 11.2,
+      floatValue: 0.0,
+      fee: 5,
+      recommended_price: 34,
+      bot_price: 45,
+      id: 2,
+      restraction: 0,
+    },
+  ]);
 
   let getBestDeals = async () => {
     const res = await MarketService.getBestDeals();
@@ -32,7 +63,7 @@ function BestDetails() {
   };
 
   useEffect(() => {
-    getBestDeals();
+    // getBestDeals();
   }, []);
 
   useEffect(() => {
@@ -105,7 +136,7 @@ function BestDetails() {
           <div className="swiper headerSwiper">
             {domLoaded && (
               <Swiper
-                slidesPerView={total <= 1 ? 1 : 4}
+                slidesPerView={4}
                 spaceBetween={30}
                 onBeforeInit={(swiper) => {
                   swiperRef.current = swiper;
@@ -157,22 +188,16 @@ function BestDetails() {
                 // navigation={true}
                 modules={[Pagination, Navigation]}
                 className="swiper-wrapper">
-                {bestDeals?.data?.map((item, index) => (
+                {bestDeals?.map((item, index) => (
                   <SwiperSlide className="swiper-slide" key={index + 1}>
-                    <a
-                      href={"market/" + item?.asset_details?.asset_id}
-                      key={index}>
+                    <a href={"market/" + item?.id} key={index}>
                       <h6>
-                        {item?.asset_details?.details?.name?.slice(0, 23)}{" "}
-                        <span>FN</span>
+                        {item?.name?.slice(0, 23)} <span>FN</span>
                       </h6>
                       <div className="d-flex justify-content-center">
                         <Image
                           style={{cursor: "pointer"}}
-                          src={
-                            item?.asset_details?.details?.icon_url ??
-                            item?.asset_details?.details?.icon_url
-                          }
+                          src={item?.img}
                           // sizes="70vw"
                           width={180}
                           height={120}
@@ -210,15 +235,14 @@ function BestDetails() {
                         </div>
                         <div className="pinCode text-end">
                           <span>
-                            {item?.asset_details?.float_value == "0"
+                            {item?.floatValue == "0"
                               ? "0.000"
-                              : item?.asset_details?.float_value == null
+                              : item?.floatValue == null
                               ? "Null"
-                              : item?.asset_details?.float_value.toFixed(3)}
+                              : item?.floatValue.toFixed(3)}
                           </span>
                           <div className="d-flex justify-content-end lock-img">
-                            {item?.asset_details?.details
-                              ?.market_tradable_restriction > 0 ? (
+                            {item?.restraction > 0 ? (
                               <>
                                 <Image
                                   src="/img/lock.svg"
@@ -227,13 +251,7 @@ function BestDetails() {
                                   height={15}
                                   width={13}
                                 />
-                                <p>
-                                  {
-                                    item?.asset_details?.details
-                                      ?.market_tradable_restriction
-                                  }
-                                  D
-                                </p>
+                                <p>{item?.restraction}D</p>
                               </>
                             ) : (
                               <div style={{marginTop: 5}}>

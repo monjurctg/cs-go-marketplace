@@ -99,7 +99,7 @@ function Index() {
 
   let dispatch = useDispatch();
   useEffect(() => {
-    dispatch(mdsApiCall(pageData));
+    // dispatch(mdsApiCall(pageData));
     setloader(false);
   }, [pageData.page]);
 

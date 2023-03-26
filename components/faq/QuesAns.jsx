@@ -16,7 +16,7 @@ function QuesAns({data}) {
     <>
       <div className="g_accorItem">
         <h2 onClick={() => activeFaqQuestion(data?.id)}>
-          <i className="fa-solid fa-bars"></i> {data?.question}
+          <i className="fa-solid fa-bars"></i> {data?.ques}
         </h2>
         <div className={`gAccorContent ${active == data?.id ? "d-block" : ""}`}>
           <p>
@@ -27,7 +27,7 @@ function QuesAns({data}) {
             <br />
             Higher tier accounts have lower fees. See Fee Schedule. 
             */}
-            {data?.answer}
+            {data?.ans}
           </p>
         </div>
       </div>
