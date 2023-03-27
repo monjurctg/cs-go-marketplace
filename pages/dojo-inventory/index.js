@@ -36,12 +36,12 @@ function Index() {
 
   // const [loader, setloader] = useState(true);
 
+  const {selectedItem, isGetAgain} = useSelector((state) => state.steamRed);
+
   useEffect(() => {
     dispatch(ddsApiCall(pageData));
     setLoading(false);
   }, [isGetAgain, pageData.page]);
-
-  const {selectedItem, isGetAgain} = useSelector((state) => state.steamRed);
 
   const onItemSelect = (data) => {
     // console.log("dataddd new", data);
